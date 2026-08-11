@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>✦ Donde Mi Corazón Aprendió a Arder con Tu Nombre ✦</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+        radial-gradient(circle at 50% 15%, rgba(255,180,100,.12), transparent 25%),
+        radial-gradient(circle at 20% 70%, rgba(155,90,255,.08), transparent 30%),
+        linear-gradient(180deg,#080611 0%,#0d0918 45%,#05040a 100%);
+    color:#f7eee7;
+    font-family:"Cormorant Garamond",serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+   CIELO
+========================= */
+
+.sky{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:0;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:#fff;
+    border-radius:50%;
+    opacity:.55;
+    animation:twinkle 4s infinite ease-in-out;
+}
+
+.star:nth-child(1){top:8%;left:13%;animation-delay:.5s}
+.star:nth-child(2){top:18%;left:78%;animation-delay:1.2s}
+.star:nth-child(3){top:31%;left:9%;animation-delay:2s}
+.star:nth-child(4){top:42%;left:88%;animation-delay:.8s}
+.star:nth-child(5){top:57%;left:18%;animation-delay:1.8s}
+.star:nth-child(6){top:69%;left:82%;animation-delay:2.5s}
+.star:nth-child(7){top:80%;left:8%;animation-delay:1s}
+.star:nth-child(8){top:91%;left:72%;animation-delay:3s}
+.star:nth-child(9){top:12%;left:47%;animation-delay:2.3s}
+.star:nth-child(10){top:53%;left:54%;animation-delay:.4s}
+.star:nth-child(11){top:76%;left:42%;animation-delay:1.5s}
+.star:nth-child(12){top:25%;left:61%;animation-delay:2.8s}
+
+@keyframes twinkle{
+    0%,100%{opacity:.2;transform:scale(.7)}
+    50%{opacity:1;transform:scale(1.8)}
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    z-index:2;
+    padding:45px 25px;
+}
+
+.intro-inner{
+    max-width:850px;
+}
+
+.symbol{
+    font-family:"Cinzel",serif;
+    font-size:18px;
+    letter-spacing:8px;
+    color:#e9b87c;
+    margin-bottom:28px;
+    opacity:.9;
+}
+
+h1{
+    font-family:"Cinzel",serif;
+    font-weight:600;
+    font-size:clamp(30px,7vw,72px);
+    line-height:1.18;
+    letter-spacing:2px;
+    background:linear-gradient(
+        120deg,
+        #fff7ec,
+        #e8bd82,
+        #fff2db,
+        #c98d58
+    );
+    -webkit-background-clip:text;
+    color:transparent;
+    text-shadow:0 0 35px rgba(235,170,100,.12);
+}
+
+.date{
+    margin-top:28px;
+    font-family:"Cinzel",serif;
+    font-size:13px;
+    letter-spacing:5px;
+    color:#c8b9ac;
+}
+
+.intro-line{
+    width:1px;
+    height:120px;
+    background:linear-gradient(
+        transparent,
+        #dca36c,
+        transparent
+    );
+    margin:45px auto 0;
+}
+
+/* =========================
+   APODO
+========================= */
+
+.fire-moon{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:100px 25px 90px;
+}
+
+.moon-ring{
+    width:170px;
+    height:170px;
+    margin:auto;
+    border-radius:50%;
+    border:1px solid rgba(224,173,112,.35);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    box-shadow:
+        0 0 40px rgba(219,150,80,.08),
+        inset 0 0 35px rgba(219,150,80,.05);
+}
+
+.moon-ring::before{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #fff7e8,
+            #e3ad73 45%,
+            #8c4f3b 72%,
+            transparent 73%
+        );
+    box-shadow:
+        0 0 50px rgba(226,161,91,.3);
+}
+
+.moon-word{
+    position:relative;
+    z-index:2;
+    font-family:"Cinzel",serif;
+    font-size:14px;
+    letter-spacing:3px;
+    color:#271b17;
+    font-weight:700;
+}
+
+.nickname{
+    margin-top:35px;
+    font-family:"Cinzel",serif;
+    font-size:20px;
+    letter-spacing:5px;
+    color:#e7b77d;
+}
+
+.subtitle{
+    margin-top:15px;
+    color:#b9a99d;
+    font-size:21px;
+}
+
+/* =========================
+   POEMA
+========================= */
+
+.poem{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    margin:auto;
+    padding:40px 25px 130px;
+}
+
+.stanza{
+    position:relative;
+    margin:0 auto 95px;
+    max-width:720px;
+}
+
+.stanza p{
+    font-size:clamp(20px,4vw,27px);
+    line-height:1.65;
+    color:#eee3da;
+    margin-bottom:25px;
+}
+
+.stanza.center{
+    text-align:center;
+}
+
+.stanza.center p{
+    font-size:clamp(23px,4.5vw,32px);
+}
+
+.whisper{
+    text-align:center;
+    color:#dca56d;
+    font-family:"Cinzel",serif;
+    font-size:12px;
+    letter-spacing:4px;
+    margin-bottom:30px;
+}
+
+.emphasis{
+    display:block;
+    text-align:center;
+    font-family:"Cinzel",serif;
+    font-size:clamp(27px,6vw,52px);
+    line-height:1.25;
+    color:#f0c184;
+    margin:55px 0;
+    text-shadow:0 0 25px rgba(235,165,90,.16);
+}
+
+.big{
+    font-size:clamp(34px,9vw,80px);
+    font-family:"Cinzel",serif;
+    letter-spacing:4px;
+    color:#fff0dc;
+    text-align:center;
+    display:block;
+    margin:65px 0;
+}
+
+/* =========================
+   FRAGMENTOS
+========================= */
+
+.fragment{
+    margin:110px auto;
+    padding:45px 25px;
+    max-width:680px;
+    text-align:center;
+    border-top:1px solid rgba(215,160,100,.25);
+    border-bottom:1px solid rgba(215,160,100,.25);
+}
+
+.fragment span{
+    display:block;
+    font-family:"Cinzel",serif;
+    color:#dca36c;
+    font-size:12px;
+    letter-spacing:5px;
+    margin-bottom:22px;
+}
+
+.fragment p{
+    font-size:clamp(25px,5vw,37px);
+    line-height:1.45;
+}
+
+/* =========================
+   CORAZÓN
+========================= */
+
+.heart-space{
+    min-height:75vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    z-index:2;
+    padding:80px 25px;
+}
+
+.heart{
+    position:relative;
+    width:125px;
+    height:125px;
+    transform:rotate(-45deg);
+    background:linear-gradient(
+        135deg,
+        #e8b271,
+        #8d473d
+    );
+    box-shadow:
+        0 0 50px rgba(229,158,87,.25),
+        0 0 110px rgba(229,158,87,.08);
+    animation:heartbeat 2.4s infinite ease-in-out;
+}
+
+.heart::before,
+.heart::after{
+    content:"";
+    position:absolute;
+    width:125px;
+    height:125px;
+    border-radius:50%;
+    background:inherit;
+}
+
+.heart::before{
+    top:-62px;
+    left:0;
+}
+
+.heart::after{
+    left:62px;
+    top:0;
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:rotate(-45deg) scale(1)}
+    8%{transform:rotate(-45deg) scale(1.08)}
+    16%{transform:rotate(-45deg) scale(1)}
+    24%{transform:rotate(-45deg) scale(1.05)}
+    32%{transform:rotate(-45deg) scale(1)}
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:80px 25px 140px;
+    max-width:850px;
+    margin:auto;
+}
+
+.final-line{
+    width:100px;
+    height:1px;
+    background:#d59c61;
+    margin:0 auto 50px;
+}
+
+.final p{
+    font-size:clamp(22px,4.5vw,32px);
+    line-height:1.6;
+    margin-bottom:35px;
+}
+
+.final-love{
+    font-family:"Cinzel",serif;
+    font-size:clamp(24px,6vw,48px);
+    line-height:1.4;
+    color:#efc486;
+    margin-top:55px;
+    text-shadow:0 0 30px rgba(230,164,90,.2);
+}
+
+.signature{
+    margin-top:65px;
+    color:#a99a90;
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+footer{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:30px 20px 60px;
+    color:#655b58;
+    font-family:"Cinzel",serif;
+    font-size:10px;
+    letter-spacing:4px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:600px){
+
+    .intro{
+        min-height:92vh;
+    }
+
+    .symbol{
+        letter-spacing:5px;
+    }
+
+    .date{
+        letter-spacing:3px;
+    }
+
+    .intro-line{
+        height:80px;
+    }
+
+    .stanza{
+        margin-bottom:75px;
+    }
+
+    .stanza p{
+        line-height:1.58;
+    }
+
+    .fire-moon{
+        padding-top:70px;
+    }
+
+    .moon-ring{
+        width:145px;
+        height:145px;
+    }
+
+    .moon-ring::before{
+        width:105px;
+        height:105px;
+    }
+
+    .heart-space{
+        min-height:55vh;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sky">
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+</div>
+
+<section class="intro">
+
+    <div class="intro-inner">
+
+        <div class="symbol">✦　✦　✦</div>
+
+        <h1>
+            DONDE MI CORAZÓN<br>
+            APRENDIÓ A ARDER<br>
+            CON TU NOMBRE
+        </h1>
+
+        <div class="date">
+            LUNES · 10 · AGOSTO · 2026
+        </div>
+
+        <div class="intro-line"></div>
+
+    </div>
+
+</section>
+
+
+<section class="fire-moon">
+
+    <div class="moon-ring">
+        <div class="moon-word">ARDER</div>
+    </div>
+
+    <div class="nickname">
+        Para ti, mi Fuego de Luna
+    </div>
+
+    <div class="subtitle">
+        mi amor que hace temblar hasta el silencio.
+    </div>
+
+</section>
+
+
+<main class="poem">
+
+    <div class="stanza center">
+
+        <p>
+            Esta noche vuelvo a encontrarte<br>
+            en ese lugar donde siempre termino cuando pienso en ti:
+        </p>
+
+        <span class="emphasis">
+            en el centro exacto<br>
+            de mi corazón.
+        </span>
+
+        <p>
+            Donde tu nombre ya no parece un nombre,<br>
+            sino una forma de respirar.
+        </p>
+
+    </div>
+
+
+    <div class="stanza">
+
+        <div class="whisper">Y ES EXTRAÑO</div>
+
+        <p>
+            Porque podría escribirte mil poemas<br>
+            y aun así sentir que ninguno alcanza
+            para decirte todo lo que provocas en mí.
+        </p>
+
+        <p>
+            Porque tú no llegaste simplemente a mi vida.
+        </p>
+
+        <span class="big">LA CAMBIASTE.</span>
+
+        <p>
+            Le enseñaste a mis días<br>
+            que podían tener un motivo para sonreír,
+            a mis noches<br>
+            que podían sentirse menos vacías,
+            y a mi corazón<br>
+            que todavía existía una manera
+            de amar con una intensidad
+            que a veces ni yo mismo sé explicar.
+        </p>
+
+    </div>
+
+
+    <div class="fragment">
+
+        <span>MI FUEGO DE LUNA</span>
+
+        <p>
+            Si alguna vez pudiera abrir mi pecho
+            y dejarte mirar dentro de mí,
+            verías que hay un lugar
+            donde siempre estás tú.
+        </p>
+
+    </div>
+
+
+    <div class="stanza center">
+
+        <p>
+            No importa cuánto pase el tiempo,<br>
+            ni qué tan difícil haya sido el día,<br>
+            ni cuántas cosas intenten distraerme:
+        </p>
+
+        <span class="emphasis">
+            mi corazón siempre sabe<br>
+            regresar a ti.
+        </span>
+
+    </div>
+
+
+    <div class="stanza">
+
+        <p>
+            Porque te amo de una manera
+            que no sabe quedarse quieta.
+        </p>
+
+        <p>
+            Te amo cuando te extraño,<br>
+            cuando te tengo cerca,<br>
+            cuando escucho tu voz,<br>
+            cuando recuerdo tu mirada,<br>
+            cuando pienso en tus abrazos
+            y hasta cuando simplemente imagino
+            que estás aquí conmigo esta noche.
+        </p>
+
+        <p>
+            Te amo con esa clase de amor
+            que quisiera detener el reloj
+            cada vez que estoy a tu lado.
+        </p>
+
+    </div>
+
+
+    <div class="fragment">
+
+        <span>SI PUDIERA DETENER EL TIEMPO</span>
+
+        <p>
+            Quisiera poder abrazarte ahora
+            y quedarme así contigo,
+            sin necesidad de decir absolutamente nada,
+            solamente sintiendo tu respiración cerca de la mía
+            y dejando que el mundo desaparezca
+            por unos minutos.
+        </p>
+
+    </div>
+
+
+    <div class="stanza center">
+
+        <p>
+            Porque hay algo que quiero
+            que nunca olvides:
+        </p>
+
+        <span class="emphasis">
+            entre millones de personas,<br>
+            mi corazón te reconoció a ti.
+        </span>
+
+        <p>
+            Y desde entonces
+            hay partes de mí
+            que solamente saben pronunciarte.
+        </p>
+
+    </div>
+
+
+    <div class="stanza">
+
+        <p>
+            Tu sonrisa tiene algo
+            que desarma todas mis defensas.
+        </p>
+
+        <p>
+            Tu mirada tiene algo
+            que me hace olvidar lo que estaba pensando.
+        </p>
+
+        <p>
+            Tu presencia tiene algo
+            que convierte cualquier instante sencillo
+            en uno que quisiera guardar para siempre.
+        </p>
+
+    </div>
+
+
+    <div class="fragment">
+
+        <span>Y TUS ABRAZOS…</span>
+
+        <p>
+            Tus abrazos son ese lugar
+            al que mi corazón quisiera llamar hogar.
+        </p>
+
+    </div>
+
+
+    <div class="stanza center">
+
+        <p>
+            Si pudiera pedirle una sola cosa a esta noche,
+            no pediría estrellas,
+            ni suerte,
+            ni siquiera un futuro perfecto.
+        </p>
+
+        <span class="emphasis">
+            Pediría solamente<br>
+            que la vida me permita seguir encontrándote<br>
+            una y otra vez.
+        </span>
+
+    </div>
+
+
+    <div class="stanza">
+
+        <p>
+            En los días fáciles.
+        </p>
+
+        <p>
+            En los días difíciles.
+        </p>
+
+        <p>
+            En las noches tranquilas.
+        </p>
+
+        <p>
+            En las noches en las que el mundo
+            parezca demasiado pesado.
+        </p>
+
+    </div>
+
+
+    <div class="fragment">
+
+        <span>NO QUIERO AMARTE ÚNICAMENTE</span>
+
+        <p>
+            cuando todo sea bonito.
+        </p>
+
+    </div>
+
+
+    <div class="stanza">
+
+        <p>
+            Quiero amarte también
+            cuando necesites refugio,
+            cuando necesites silencio,
+            cuando necesites que alguien te recuerde
+            que no tienes que cargar con todo sola.
+        </p>
+
+        <p>
+            Quiero ser ese corazón
+            que, incluso en medio del caos,
+            te diga:
+        </p>
+
+    </div>
+
+
+    <div class="fragment">
+
+        <p>
+            “Ven,<br>
+            aquí puedes descansar.”
+        </p>
+
+    </div>
+
+
+    <div class="stanza center">
+
+        <p>
+            Y si alguna vez dudas
+            de cuánto significas para mí,
+            recuerda esta noche.
+        </p>
+
+        <p>
+            Recuerda que existe alguien
+            que puede mirar el cielo
+            y encontrar tu rostro entre las estrellas.
+        </p>
+
+        <p>
+            Alguien que puede escuchar una canción
+            y descubrirte escondida entre sus notas.
+        </p>
+
+        <p>
+            Alguien que puede cerrar los ojos
+            y sentir que, de alguna manera,
+            sigues estando cerca.
+        </p>
+
+        <span class="big">
+            ESE ALGUIEN SOY YO.
+        </span>
+
+    </div>
+
+
+    <div class="stanza center">
+
+        <span class="emphasis">
+            Y TE AMO.
+        </span>
+
+        <p>
+            Te amo muchísimo más
+            de lo que cabría en una carta,
+            más de lo que podría explicarte en una noche,
+            más de lo que mis manos podrían demostrarte
+            con todos los abrazos que quisiera darte.
+        </p>
+
+    </div>
+
+
+    <div class="fragment">
+
+        <p>
+            Te amo con paciencia.<br><br>
+            Con deseo.<br><br>
+            Con ternura.<br><br>
+            Con locura.
+        </p>
+
+    </div>
+
+
+    <div class="stanza center">
+
+        <p>
+            Con esa pequeña parte de mí
+            que todavía se sorprende
+            de haber encontrado a alguien
+            capaz de hacer que mi corazón
+            se sienta tan vivo.
+        </p>
+
+    </div>
+
+
+    <div class="stanza center">
+
+        <div class="whisper">SI EL UNIVERSO ME DEJARA ELEGIR</div>
+
+        <p>
+            Si el universo me concediera
+            la oportunidad de volver a elegir
+            a quién entregar mi corazón,
+        </p>
+
+        <span class="big">
+            VOLVERÍA A ELEGIRTE A TI.
+        </span>
+
+        <p>
+            Sin pensarlo.<br>
+            Sin miedo.<br>
+            Sin buscar otra respuesta.
+        </p>
+
+        <span class="emphasis">
+            A ti.<br>
+            Siempre a ti.
+        </span>
+
+    </div>
+
+
+    <div class="stanza">
+
+        <p>
+            Porque entre todos los caminos posibles,
+            mi corazón encontró el tuyo
+            y decidió quedarse.
+        </p>
+
+        <p>
+            Y mientras exista una noche más,
+            un amanecer más,
+            un latido más dentro de mi pecho,
+        </p>
+
+        <span class="emphasis">
+            habrá una parte de mí
+            que seguirá pronunciando tu nombre
+            como si fuera la palabra más hermosa
+            que la vida me enseñó.
+        </span>
+
+    </div>
+
+
+    <div class="fragment">
+
+        <span>DUERME ESTA NOCHE SABIENDO</span>
+
+        <p>
+            que, en algún lugar de este mundo,
+            hay un corazón que te ama profundamente.
+        </p>
+
+    </div>
+
+
+    <div class="stanza center">
+
+        <p>
+            Uno que te extraña.
+        </p>
+
+        <p>
+            Uno que te desea cerca.
+        </p>
+
+        <p>
+            Uno que te piensa antes de dormir.
+        </p>
+
+        <p>
+            Uno que, incluso cuando guarda silencio,
+            sigue gritándole al universo
+            lo mismo:
+        </p>
+
+        <span class="big">
+            QUE ERES TÚ.
+        </span>
+
+    </div>
+
+
+    <div class="stanza center">
+
+        <p>
+            Tú, mi amor.
+        </p>
+
+        <p>
+            Tú, mi refugio.
+        </p>
+
+        <p>
+            Tú, mi locura más bonita.
+        </p>
+
+        <span class="emphasis">
+            Tú, mi Fuego de Luna.
+        </span>
+
+    </div>
+
+</main>
+
+
+<section class="heart-space">
+
+    <div class="heart"></div>
+
+</section>
+
+
+<section class="final">
+
+    <div class="final-line"></div>
+
+    <p>
+        Y si mañana vuelve a salir el sol,
+        yo solamente pediré una cosa:
+    </p>
+
+    <p>
+        que me encuentre todavía amándote
+        con la misma intensidad
+        con la que esta noche
+        mi corazón vuelve a escogerte.
+    </p>
+
+    <div class="final-love">
+
+        Una vez más.<br><br>
+
+        Y todas las veces<br>
+        que la vida me permita.
+
+    </div>
+
+    <div class="signature">
+
+        ✦ Te amo, mi Fuego de Luna. ✦<br><br>
+
+        Esta noche, mañana<br>
+        y en cada noche que todavía no conocemos.
+
+    </div>
+
+</section>
+
+
+<footer>
+    ✦ UN LATIDO · UNA NOCHE · UN NOMBRE ✦
+</footer>
+
+
+</body>
+</html>
